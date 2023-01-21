@@ -2,7 +2,7 @@
     background-color: #000000;
     font-family: 'Inter', Arial, sans-serif;
     margin: 0 auto;
-    padding: 0 6% 0 6%;
+    padding: 0;
     width: 100%;
     min-width: 320px;
     max-width: 1280px;
@@ -16,13 +16,13 @@
 
 @media screen and (min-width: 768px) {
     .page {
-        padding: 0 calc(30% - 185px) 0 calc(30% - 185px);
+        padding: 0 calc(24% - 185px) 0 calc(24% - 185px);
     }
 }
 
 @media screen and (min-width: 1280px) {
     .page {
-        padding: 0 200px 0 200px;
+        padding: 0 123px 0 123px;
     }
 }
 

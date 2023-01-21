@@ -1,15 +1,15 @@
 .profile {
     padding: 0;
-    margin-bottom: 36px;
+    margin: 0 6% 36px 6%;
     display: flex;
     flex-direction: column;
-    }
+}
 
 @media screen and (min-width: 768px) {
-   .profile {
-       display: flex;
-       flex-direction: row;
-       justify-content: space-between;
-       align-items: center;
-   }
+    .profile {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
+

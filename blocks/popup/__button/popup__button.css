@@ -2,6 +2,7 @@
     width: 100%;
     height: 46px;
     background-color: #000000;
+    border: none;
     border-radius: 2px;
     font-style: normal;
     font-weight: 400;
@@ -10,6 +11,7 @@
     text-align: center;
     color: #FFFFFF;
     transition: opacity 0.5s;
+    margin-top: 16px;
 }
 
 .popup__button:hover {

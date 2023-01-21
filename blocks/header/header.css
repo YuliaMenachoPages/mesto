@@ -1,13 +1,11 @@
 .header {
     padding: 0;
-    margin: 28px -6% 42px -6%;
+    margin: 28px 0 42px 0;
     border-bottom: 2px solid rgba(84, 84, 84, 0.7);
-    width: 112%;
 }
 
 @media screen and (min-width: 768px) {
-   .header {
-       margin: 45px 0 42px 0;
-       width: 100%;
-   }
+    .header {
+        margin: 45px 6% 42px 6%;
+    }
 }

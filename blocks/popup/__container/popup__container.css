@@ -1,7 +1,6 @@
 .popup__container {
-    margin: 123px auto 0 auto;
+    margin: 0 auto;
     width: 282px;
-    height: 322px;
     background: #FFFFFF;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
@@ -11,10 +10,9 @@
 }
 
 @media screen and (min-width: 768px) {
-   .popup__container {
-       margin: 195px auto 0 auto;
-       width: 430px;
-       height: 330px;
-       padding: 34px 36px 37px 36px;
-   }
+    .popup__container {
+        margin: 0 auto;
+        width: 430px;
+        padding: 34px 36px 37px 36px;
+    }
 }

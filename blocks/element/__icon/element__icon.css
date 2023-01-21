@@ -1,4 +1,9 @@
 .element__icon {
+    background-image: url("../../../images/elements-like.svg");
+    background-position: center;
+    background-size: contain;
+    border: none;
+    background-color: #FFFFFF;
     width: 22px;
     height: 19px;
     margin: 0 0 0 20px;

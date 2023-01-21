@@ -1,4 +1,9 @@
 .popup__close {
+    background-image: url("../../../images/popup-close.svg");
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    background-position: center;
+    background-size: contain;
     width: 20px;
     aspect-ratio: 1;
     position: absolute;
@@ -11,7 +16,7 @@
     opacity: 0.6;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
     .popup__close {
         width: 32px;
         top: -40px;

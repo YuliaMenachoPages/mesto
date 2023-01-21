@@ -1,6 +1,6 @@
-.popup__fullname {
+.popup__form-field {
     border: none;
-    border-bottom: 2px solid rgba(225, 225, 225, 0.2);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -12,5 +12,3 @@
     white-space: nowrap;
     overflow: hidden;
 }
-
-
