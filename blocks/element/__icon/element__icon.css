@@ -1,0 +1,10 @@
+.element__icon {
+    width: 22px;
+    height: 19px;
+    margin: 0 0 0 20px;
+    transition: opacity 0.5s;
+}
+
+.element__icon:hover {
+    opacity: 0.5;
+}

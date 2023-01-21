@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pages/index.css">
+    <title>Место</title>
+</head>
+<body class="page">
+<header class="header">
+    <img src="images/header-logo.svg" alt="Место. Россия" class="header__logo">
+</header>
+<main>
+    <section class="profile">
+        <img src="images/profile-picture.jpg" alt="Фото" class="profile__picture">
+        <div class="profile__info">
+            <div class="profile__edit-info">
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <img src="images/profile-EditButton.svg" alt="Изменить" class="profile__edit-button">
+            </div>
+            <h2 class="profile__about">Исследователь океана</h2>
+        </div>
+        <div class="profile__add-button">
+            <img src="images/profile-Add.svg" alt="Добавить" class="profile__add">
+        </div>
+    </section>
+    <section class="popup">
+        <div class="popup__container">
+            <img src="images/popup-close.svg" alt="Закрыть" class="popup__close">
+            <h2 class="popup__header">Редактировать профиль</h2>
+            <form action="#" class="popup__form">
+                <input class="popup__fullname" type="text" name="fullname" value="Жак-Ив Кусто">
+                <input class="popup__about" type="text" name="about" value="Исследователь океана">
+                <button class="popup__button" type="submit" value="Submit">Сохранить</button>
+            </form>
+        </div>
+    </section>
+    <section class="elements">
+        <ul class="elements__container">
+            <li class="element">
+                <img src="images/elements-Karachaevsk.jpg" alt="Замок. Карачаевск" class="element__picture">
+                <div class="element__info">
+                    <h2 class="element__text">Карачаевск</h2>
+                    <img src="images/elements-like.svg" alt="Лайк" class="element__icon">
+                    <img src="images/elements-like-black.svg" alt="Лайк"
+                         class="element__icon element__icon_switch-off">
+                </div>
+            </li>
+            <li class="element">
+                <img src="images/elements-Elbrus.jpg" alt="Закат. Гора Эльбрус" class="element__picture">
+                <div class="element__info">
+                    <h2 class="element__text">Гора Эльбрус</h2>
+                    <img src="images/elements-like.svg" alt="Лайк" class="element__icon">
+                    <img src="images/elements-like-black.svg" alt="Лайк"
+                         class="element__icon element__icon_switch-off">
+                </div>
+            </li>
+            <li class="element">
+                <img src="images/elements-Dombay.jpg" alt="Горы. Домбай" class="element__picture">
+                <div class="element__info">
+                    <h2 class="element__text">Домбай</h2>
+                    <img src="images/elements-like.svg" alt="Лайк" class="element__icon">
+                    <img src="images/elements-like-black.svg" alt="Лайк"
+                         class="element__icon element__icon_switch-off">
+                </div>
+            </li>
+            <li class="element">
+                <img src="images/elements-Elbrus.jpg" alt="Закат. Гора Эльбрус" class="element__picture">
+                <div class="element__info">
+                    <h2 class="element__text">Гора Эльбрус</h2>
+                    <img src="images/elements-like.svg" alt="Лайк" class="element__icon">
+                    <img src="images/elements-like-black.svg" alt="Лайк"
+                         class="element__icon element__icon_switch-off">
+                </div>
+            </li>
+            <li class="element">
+                <img src="images/elements-Dombay.jpg" alt="Горы. Домбай" class="element__picture">
+                <div class="element__info">
+                    <h2 class="element__text">Домбай</h2>
+                    <img src="images/elements-like.svg" alt="Лайк" class="element__icon">
+                    <img src="images/elements-like-black.svg" alt="Лайк"
+                         class="element__icon element__icon_switch-off">
+                </div>
+            </li>
+            <li class="element">
+                <img src="images/elements-Karachaevsk.jpg" alt="Замок. Карачаевск" class="element__picture">
+                <div class="element__info">
+                    <h2 class="element__text">Карачаево-Черкессия</h2>
+                    <img src="images/elements-like.svg" alt="Лайк" class="element__icon">
+                    <img src="images/elements-like-black.svg" alt="Лайк"
+                         class="element__icon element__icon_switch-off">
+                </div>
+            </li>
+        </ul>
+    </section>
+</main>
+<footer class="footer">
+    <p class="footer__logo">&copy; 2020 Mesto Russia</p>
+</footer>
+<script src="scripts/index.js"></script>
+</body>
+</html>

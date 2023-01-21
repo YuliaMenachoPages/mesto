@@ -1,0 +1,12 @@
+.elements__container {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(246px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(361px, 1fr));
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    justify-content: center;
+    list-style: none;
+}
