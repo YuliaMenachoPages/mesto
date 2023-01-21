@@ -3,11 +3,13 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    background-clip: border-box;
     border: none;
     background-color: #FFFFFF;
-    width: 22px;
-    height: 19px;
+    min-width: 23px;
+    min-height: 20px;
     margin: 0 0 0 20px;
+    padding: 0;
     transition: opacity 0.5s;
 }
 
