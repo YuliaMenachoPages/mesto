@@ -12,6 +12,7 @@
     color: #FFFFFF;
     transition: opacity 0.5s;
     margin-top: 16px;
+    cursor: pointer;
 }
 
 .popup__button:hover {

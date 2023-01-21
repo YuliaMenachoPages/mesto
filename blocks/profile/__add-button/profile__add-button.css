@@ -14,6 +14,7 @@
     align-items: center;
     transition: opacity 0.5s;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .profile__add-button:hover {

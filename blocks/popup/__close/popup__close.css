@@ -10,6 +10,7 @@
     top: -36px;
     right: 0;
     transition: opasity 0.5s;
+    cursor: pointer;
 }
 
 .popup__close:hover {

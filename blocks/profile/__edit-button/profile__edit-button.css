@@ -9,6 +9,7 @@
     height: 18px;
     width: 18px;
     transition: opacity 0.5s;
+    cursor: pointer;
 }
 
 .profile__edit-button:hover {
