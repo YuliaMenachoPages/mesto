@@ -3,7 +3,7 @@
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #000000;
+    background-color: rgba(255, 255, 255, 0);
     width: 282px;
     height: 49px;
     margin: 0 auto;
@@ -23,9 +23,9 @@
 
 @media screen and (min-width: 768px) {
     .profile__add-button {
-        margin: 0 0 0 auto;
+        margin: 0 0 7px auto;
         width: 148px;
-        height: 48px;
+        height: 50px;
         background-size: 22px;
 
     }

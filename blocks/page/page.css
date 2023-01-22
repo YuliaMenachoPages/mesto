@@ -16,13 +16,13 @@
 
 @media screen and (min-width: 768px) {
     .page {
-        padding: 0 calc(24% - 185px) 0 calc(24% - 185px);
+        padding: 0 calc(26% - 185px) 0 calc(26% - 185px);
     }
 }
 
 @media screen and (min-width: 1280px) {
     .page {
-        padding: 0 123px 0 123px;
+        padding: 0 141px 0 141px;
     }
 }
 
