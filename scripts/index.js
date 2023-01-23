@@ -39,10 +39,6 @@ function handleFormSubmit(evt) {
    about.textContent = (jobInput.value);
 
 //Закрытие Popup
-    function closePopup() {
-        popup.classList.remove('popup_opened');
-    }
-
     closePopup();
 }
 
