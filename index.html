@@ -24,59 +24,17 @@
     </section>
     <section class="elements">
         <ul class="elements__container">
-            <li class="element">
-                <img src="images/elements-Karachaevsk.jpg" alt="Замок. Карачаевск" class="element__picture">
-                <div class="element__info">
-                    <h2 class="element__text">Карачаевск</h2>
-                    <button type="button" aria-label="Лайк" class="element__icon"></button>
-                </div>
-            </li>
-            <li class="element">
-                <img src="images/elements-Elbrus.jpg" alt="Закат. Гора Эльбрус" class="element__picture">
-                <div class="element__info">
-                    <h2 class="element__text">Гора Эльбрус</h2>
-                    <button type="button" aria-label="Лайк" class="element__icon"></button>
-                </div>
-            </li>
-            <li class="element">
-                <img src="images/elements-Dombay.jpg" alt="Горы. Домбай" class="element__picture">
-                <div class="element__info">
-                    <h2 class="element__text">Домбай</h2>
-                    <button type="button" aria-label="Лайк" class="element__icon"></button>
-                </div>
-            </li>
-            <li class="element">
-                <img src="images/elements-Elbrus.jpg" alt="Закат. Гора Эльбрус" class="element__picture">
-                <div class="element__info">
-                    <h2 class="element__text">Гора Эльбрус</h2>
-                    <button type="button" aria-label="Лайк" class="element__icon"></button>
-                </div>
-            </li>
-            <li class="element">
-                <img src="images/elements-Dombay.jpg" alt="Горы. Домбай" class="element__picture">
-                <div class="element__info">
-                    <h2 class="element__text">Домбай</h2>
-                    <button type="button" aria-label="Лайк" class="element__icon"></button>
-                </div>
-            </li>
-            <li class="element">
-                <img src="images/elements-Karachaevsk.jpg" alt="Замок. Карачаевск" class="element__picture">
-                <div class="element__info">
-                    <h2 class="element__text">Карачаево-Черкессия</h2>
-                    <button type="button" aria-label="Лайк" class="element__icon"></button>
-                </div>
-            </li>
         </ul>
     </section>
 </main>
 <footer class="footer">
     <p class="footer__logo">&copy; 2020 Mesto Russia</p>
 </footer>
-<div class="popup">
+<div class="popup popup_type_profile">
     <div class="popup__container">
-        <button aria-label="Закрыть" class="popup__close"></button>
+        <button aria-label="Закрыть" class="popup__close popup__close_type_profile"></button>
         <h2 class="popup__header">Редактировать профиль</h2>
-        <form action="#" name="popup-form" class="popup__form">
+        <form action="#" name="popup-form" class="popup__form popup__form_type_profile">
             <input class="popup__form-field popup__form-field_type_fullname" type="text" name="fullname"
                    value="">
             <input class="popup__form-field popup__form-field_type_about" type="text" name="about"
@@ -85,6 +43,41 @@
         </form>
     </div>
 </div>
+<div class="popup popup_type_card">
+    <div class="popup__container">
+        <button aria-label="Закрыть" class="popup__close popup__close_type_card"></button>
+        <h2 class="popup__header">Новое место</h2>
+        <form action="#" name="popup-form" class="popup__form popup__form_type_card">
+            <input class="popup__form-field popup__form-field_type_landmark" type="text" name="landmark"
+                   placeholder="Название"
+                   value="">
+            <input class="popup__form-field popup__form-field_type_link" type="url" name="link"
+                   placeholder="Ссылка на картинку"
+                   value="">
+            <button class="popup__button" type="submit" value="Submit">Создать</button>
+        </form>
+    </div>
+</div>
+<div class="popup popup_type_image-container">
+    <div class="popup__fallback">
+    <button aria-label="Закрыть" class="popup__close popup__close_type_image-container"></button>
+    <img class="popup__picture" src="#" alt="Фото">
+    <h2 class="popup__text"></h2>
+    </div>
+</div>
+<template class="cards-template">
+    <li class="element">
+       <button type="button" aria-label="Удалить" class="element__delete element__delete_type_white"></button>
+        <div class="element__fallback">
+            <button type="button" aria-label="Удалить" class="element__delete element__delete_type_black"></button>
+            <img class="element__picture">
+        </div>
+        <div class="element__info">
+            <h2 class="element__text"></h2>
+            <button type="button" aria-label="Лайк" class="element__icon"></button>
+        </div>
+    </li>
+</template>
 <script src="scripts/index.js"></script>
 </body>
 </html>

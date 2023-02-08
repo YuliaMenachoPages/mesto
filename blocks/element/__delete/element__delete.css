@@ -1,0 +1,18 @@
+.element__delete {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 1;
+    width: 19px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: opacity 0.5s;
+    cursor: pointer;
+}
+
+.element__delete:hover {
+    opacity: 0.6;
+}

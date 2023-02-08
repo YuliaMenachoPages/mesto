@@ -1,7 +1,12 @@
 .element__picture {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     aspect-ratio: 1 / 1;
     border-radius: 10px 10px 0 0;
-    margin-bottom: 23px;
+    margin: 0;
+    padding: 0;
+    filter: brightness(90%);
+    background-image: url("../../../images/element__fallback.png");
+    content: "";
+    background-color: linear-gradient(#FFFFFF, #545454);
 }

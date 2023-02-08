@@ -1,0 +1,4 @@
+.element__delete_type_black {
+    background-image: url("../../../../images/elements-trash-black.svg");
+    z-index: 0;
+}

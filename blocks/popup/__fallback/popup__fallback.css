@@ -1,0 +1,9 @@
+.popup__fallback {
+    max-height: 75vh;
+    max-width: 75vw;
+    position: relative;
+    margin: 0 auto 10px auto;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0);
+}

@@ -11,4 +11,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+
+}
+
+.popup__form-field:focus {
+    outline: 3px solid #34a0f8;
+    border-radius: 2px;
 }
