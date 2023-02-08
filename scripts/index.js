@@ -168,7 +168,7 @@ function handleFormSubmitCard(evt) {
 formElementCard.addEventListener('submit', handleFormSubmitCard);
 
 //Функции просмотра изображений
-    //Закрытие без сохранения
+    //Закрытие
 function closePopupImageContainer() {
     closePopup(popupImageContainer);
 }
