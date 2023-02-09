@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9e98a92c-4c61-4e82-95e9-2a2198e4d24c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__fallback/element__fallback.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__fallback/element__fallback.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__picture/element__picture.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/element/__picture/element__picture.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/elements/__container/elements__container.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/elements/__container/elements__container.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/fade/fade__in.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/fade/fade__in.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/fade/fade__out.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/fade/fade__out.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__text/popup__text.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__text/popup__text.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__edit-info/profile__edit-info.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__edit-info/profile__edit-info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/elements-like-black.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/elements-like-black.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/elements-like.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/elements-like.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/elements-trash-black.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/elements-trash-black.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/elements-trash.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/elements-trash.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/footer-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/footer-logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/header-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/header-logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/popup-close.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/popup-close.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/profile-Add.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/profile-Add.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/profile-EditButton.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/profile-EditButton.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fonts/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fonts/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/normalize.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +50,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -37,6 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675874518489</updated>
       <workItem from="1675874522216" duration="37000" />
+      <workItem from="1675880979198" duration="7530000" />
     </task>
     <servers />
   </component>

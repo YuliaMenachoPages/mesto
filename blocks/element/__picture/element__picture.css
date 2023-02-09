@@ -8,5 +8,7 @@
     filter: brightness(90%);
     background-image: url("../../../images/element__fallback.png");
     content: "";
-    background-color: linear-gradient(#FFFFFF, #545454);
+    position: absolute;
+    top: 0;
+    left: 0;
 }

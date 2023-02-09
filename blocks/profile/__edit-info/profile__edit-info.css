@@ -7,7 +7,7 @@
     justify-content: center;
 }
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .profile__edit-info {
         padding: 27px 0 0 0;
     }
