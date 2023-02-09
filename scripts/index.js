@@ -58,18 +58,11 @@ const popupText = popupImageContainer.querySelector('.popup__text');
 //Открытие Popup
 function openPopup(elem) {
     elem.classList.add('popup_opened');
-    elem.style.animation = "fadeIn 0.3s forwards";
 }
 
 //Закрытие Popup
 function closePopup(elem) {
-    elem.style.animation = "fadeOut 0.3s forwards"
-
-    function removeOpened(elem) {
-        elem.classList.remove('popup_opened');
-    }
-
-    setTimeout(removeOpened, 300, elem);
+    elem.classList.remove('popup_opened');
 }
 
 //Закрытие без сохранения
