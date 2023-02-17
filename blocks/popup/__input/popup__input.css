@@ -6,12 +6,11 @@
     font-size: 14px;
     line-height: 1.2;
     padding-bottom: 9px;
-    margin: 0 0 30px 0;
+    margin: 0 0 5px 0;
     width: 100%;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-
 }
 
 .popup__input:focus {
@@ -20,5 +19,5 @@
 }
 
 .popup__input:invalid {
-border-bottom: 1px solid #FF0000;
+    border-bottom: 1px solid #FF0000;
 }
