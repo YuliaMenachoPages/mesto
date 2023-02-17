@@ -1,4 +1,4 @@
-.popup__form-field {
+.popup__input {
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     font-style: normal;
@@ -14,7 +14,11 @@
 
 }
 
-.popup__form-field:focus {
+.popup__input:focus {
     outline: 3px solid #34a0f8;
     border-radius: 2px;
+}
+
+.popup__input:invalid {
+border-bottom: 1px solid #FF0000;
 }

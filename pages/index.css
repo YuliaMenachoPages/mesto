@@ -41,13 +41,11 @@
 @import url('../blocks/popup/__text/popup__text.css');
 @import url('../blocks/popup/__header/popup__header.css');
 @import url('../blocks/popup/__form/popup__form.css');
-@import url('../blocks/popup/__form-field/popup__form-field.css');
-@import url('../blocks/popup/__form-field/_type/popup__form-field_type_fullname.css');
-@import url('../blocks/popup/__form-field/_type/popup__form-field_type_about.css');
+@import url('../blocks/popup/__input/popup__input.css');
 @import url('../blocks/popup/__button/popup__button.css');
+@import url('../blocks/popup/__button/_disabled/popup__button_disabled.css');
 
-@import url('../blocks/fade/fade__in.css');
-@import url('../blocks/fade/fade__out.css');
+
 
 
 
