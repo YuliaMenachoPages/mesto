@@ -1,5 +1,6 @@
 const validationFields = {
     formSelector: '.popup__form',
+    formOpenedSelector: '.popup_opened',
     inputSelector: '.popup__input',
     fieldsetSelector: '.popup__fieldset',
     submitButtonSelector: '.popup__button',
@@ -49,8 +50,6 @@ const toggleButtonState = (fields, inputList, buttonElement, evt) => {
         buttonElement.disabled = false;
     }
 };
-
-
 const setEventListeners = (fields, popupElement) => {
     const inputList = Array.from(popupElement.querySelectorAll(fields.inputSelector));
     const buttonElement = popupElement.querySelector(fields.submitButtonSelector);
@@ -79,4 +78,12 @@ const enableValidation = (fields) => {
 
 enableValidation(validationFields);
 
-
+function quitErrors(fields, popupElement) {
+    const errors = Array.from(popupElement.querySelectorAll(fields.inputSelector));
+    errors.forEach(function (error) {
+        hideInputError(fields, popupElement, error);
+        const buttonToQuit = popupElement.querySelector(fields.submitButtonSelector);
+        buttonToQuit.classList.add(fields.inactiveButtonClass);
+        buttonToQuit.disabled = true;
+    });
+}
