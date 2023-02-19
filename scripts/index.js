@@ -143,10 +143,10 @@ function createCard(item) {
 
     //Функция открытия просмотра карточки
     function openImageContainer() {
-        openPopup(popupImageContainer);
         setLink(popupPicture);
         setAlt(popupPicture);
         setText(popupText);
+        openPopup(popupImageContainer);
     }
 
     cardPicture.addEventListener('click', openImageContainer);
