@@ -1,7 +1,7 @@
 export class Card {
-    constructor(item, templateSelector, openImageContainer) {
-        this._landmark = item.landmark;
-        this._link = item.link;
+    constructor(cardData, templateSelector, openImageContainer) {
+        this._landmark = cardData.landmark;
+        this._link = cardData.link;
         this._templateSelector = templateSelector;
         this._openImageContainer = openImageContainer;
     }
@@ -20,8 +20,8 @@ export class Card {
         this._element = this._getTemplate();
         this._setEventListeners();
 
-        this._element.querySelector('.element__picture').setAttribute('src', this._link);
-        this._element.querySelector('.element__picture').setAttribute('alt', ("Фото. " + this._landmark));
+        this._element.querySelector('.element__picture').src = this._link;
+        this._element.querySelector('.element__picture').alt = "Фото. " + this._landmark;
         this._element.querySelector('.element__text').textContent = "" + this._landmark;
 
         return this._element;
@@ -29,30 +29,26 @@ export class Card {
 
     _setEventListeners() {
 
-        this._element.addEventListener('click', (evt) => {
+        this._element.querySelector('.element__icon').addEventListener('click', (evt) => {
             this._toggleLike(evt);
         });
 
-        this._element.addEventListener('click', (evt) => {
+        this._element.querySelector('.element__delete').addEventListener('click', (evt) => {
             this._deleteCard(evt);
         });
-        this._element.addEventListener('click', (evt) => {
+        this._element.querySelector('.element__picture').addEventListener('click', (evt) => {
             this._openImageContainer(this._link, this._landmark, evt);
         });
 
     }
 
     _toggleLike(evt) {
-        const _like = evt.target;
-        if (_like.classList.contains('element__icon')) {
-            _like.classList.toggle('element__icon_active');
-        }
+        const buttonLike = evt.target;
+            buttonLike.classList.toggle('element__icon_active');
     }
 
-    _deleteCard(evt) {
-        const _trash = evt.target;
-        if (_trash.classList.contains('element__delete')) {
+    _deleteCard() {
             this._element.remove();
-        }
+            this._element = null;
     }
 }
