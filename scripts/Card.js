@@ -44,11 +44,11 @@ export class Card {
 
     _toggleLike(evt) {
         const buttonLike = evt.target;
-            buttonLike.classList.toggle('element__icon_active');
+        buttonLike.classList.toggle('element__icon_active');
     }
 
     _deleteCard() {
-            this._element.remove();
-            this._element = null;
+        this._element.remove();
+        this._element = null;
     }
 }

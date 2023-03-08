@@ -3,14 +3,14 @@ import {Card} from './Card.js';
 import {FormValidator} from './FormValidator.js';
 
 //Общие переменные
+
 const popupCloseButtons = document.querySelectorAll('.popup__close');
 const popupList = document.querySelectorAll('.popup');
 
-
 // Переменные для редактирования профиля
+
 const popupProfile = document.querySelector('.popup_type_profile');
 const popupProfileFieldset = popupProfile.querySelector('.popup__fieldset_type_profile');
-
 const popupOnProfile = document.querySelector('.profile__edit-button');
 const formElementProfile = popupProfile.querySelector('.popup__form_type_profile');
 // Обработка формы Submit
@@ -44,7 +44,10 @@ const validationFields = {
     inputErrorClass: 'popup__input_type_error',
     errorClass: 'popup__error_visible',
 };
-//...Функции...
+const profileFormValidator = new FormValidator(validationFields, popupProfileFieldset);
+const cardFormValidator = new FormValidator(validationFields, popupCardFieldset);
+
+//---Функции---
 
 ///Вспомогательные функции
 
@@ -65,45 +68,37 @@ function closePopupByClick(evt) {
 }
 
 //Установщик слушателей
-function setEventListeners(popups) {
-    popups.forEach((popup) =>
-    {
+function setOverlayClickEventListeners(popups) {
+    popups.forEach((popup) => {
         popup.addEventListener('click', closePopupByClick);
-            });
+    });
 }
 
 //Открытие Popup
 function openPopup(elem) {
     elem.classList.add('popup_opened');
     document.addEventListener('keydown', handleClosePopupByEsc);
-   // document.addEventListener('click', closePopupByClick);
 }
 
 //Закрытие Popup
 function closePopup(elem) {
     elem.classList.remove('popup_opened');
+    document.removeEventListener('keydown', handleClosePopupByEsc);
 }
-
-//Закрытие без сохранения
-popupCloseButtons.forEach((button) => {
-    const popup = button.closest('.popup');
-    button.addEventListener('click', () => closePopup(popup));
-});
 
 
 ///Функции редактирования профиля
 
 //Валидация
-new FormValidator(validationFields, popupProfileFieldset).enableValidation();
+profileFormValidator.enableValidation();
 
 //Открытие, запись данных
 function openPopupProfile() {
     nameInput.value = name.textContent;
     jobInput.value = about.textContent;
     openPopup(popupProfile);
-    new FormValidator(validationFields, popupProfileFieldset).resetErrors();
+    profileFormValidator.resetErrors(popupProfile);
 }
-
 
 // Обработка формы Submit и закрытия Popup
 function handleFormSubmitProfile(evt) {
@@ -117,7 +112,7 @@ function handleFormSubmitProfile(evt) {
 ///Функции добавления карточек
 
 //Валидация
-new FormValidator(validationFields, popupCardFieldset).enableValidation();
+cardFormValidator.enableValidation();
 
 //Создание карточки
 
@@ -140,7 +135,7 @@ initialCards.forEach((cardData) => {
 //Открытие
 function openPopupCard() {
     openPopup(popupCard);
-    new FormValidator(validationFields, popupCardFieldset).resetErrors();
+    cardFormValidator.resetErrors();
 }
 
 // Обработка формы Submit и закрытия Popup
@@ -153,15 +148,22 @@ function handleFormSubmitCard(evt) {
     evt.target.reset();
 }
 
+
 //---Обработчики ---
 
-setEventListeners(popupList);
+setOverlayClickEventListeners(popupList);
+
+//Закрытие без сохранения
+popupCloseButtons.forEach((button) => {
+    const popup = button.closest('.popup');
+    button.addEventListener('click', () => closePopup(popup));
+});
 
 ///Обработчики редактирования профиля
 popupOnProfile.addEventListener('click', openPopupProfile);
 formElementProfile.addEventListener('submit', handleFormSubmitProfile);
-///Обработчики карточек
 
+///Обработчики карточек
 popupOnCard.addEventListener('click', openPopupCard);
 formElementCard.addEventListener('submit', handleFormSubmitCard);
 
