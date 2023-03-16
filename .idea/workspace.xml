@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e98a92c-4c61-4e82-95e9-2a2198e4d24c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/components/Popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/components/PopupWithForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/components/PopupWithImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/components/Section.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/components/UserInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/utils/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/utils/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/FormValidator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +48,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;js.buildTools.gulp.gulp_package_dir&quot;: &quot;/usr/local/lib/node_modules/gulp&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/dima/WebstormProjects/Yandex/sprint-4-5-6-JMP-mesto/mesto pr 6/mesto bugfix/scripts/validate.js&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/dima/dev/mesto&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -50,6 +58,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts/pages" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -81,6 +94,17 @@
       <workItem from="1678134034315" duration="15315000" />
       <workItem from="1678203039348" duration="2302000" />
       <workItem from="1678264817787" duration="1362000" />
+      <workItem from="1678277191211" duration="83000" />
+      <workItem from="1678306543947" duration="2348000" />
+      <workItem from="1678390221362" duration="10390000" />
+      <workItem from="1678479991605" duration="2303000" />
+      <workItem from="1678566630705" duration="2331000" />
+      <workItem from="1678702514947" duration="15432000" />
+      <workItem from="1678788478314" duration="9723000" />
+      <workItem from="1678808517312" duration="4847000" />
+      <workItem from="1678865423122" duration="27778000" />
+      <workItem from="1678947440318" duration="22149000" />
+      <workItem from="1678974418038" duration="2148000" />
     </task>
     <servers />
   </component>
