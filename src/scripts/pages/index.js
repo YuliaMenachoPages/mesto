@@ -23,8 +23,8 @@ import UserInfo from '../components/UserInfo.js';
 const renderer = (cardData) => {
     const card = new Card(cardData, '.cards-template', {
         handleCardClick: () => {
-            const popupWithImage = new PopupWithImage(cardData, '.popup_type_image-container');
-            popupWithImage.open();
+            const popupWithImage = new PopupWithImage('.popup_type_image-container');
+            popupWithImage.open(cardData.link, cardData.landmark);
         }
     });
     const cardElement = card.generateCard();
@@ -39,18 +39,24 @@ const popupWithFormCard = new PopupWithForm('.popup_type_card', {submitter: (ite
 const profileFormValidator = new FormValidator(validationFields, popupProfileFieldset);
 const cardFormValidator = new FormValidator(validationFields, popupCardFieldset);
 
+
 //----ФУНКЦИИ----
 
 profileFormValidator.enableValidation();
 cardFormValidator.enableValidation();
 cardList.renderItems();
 
+
 //----СЛУШАТЕЛИ----
 
 popupOnCard.addEventListener('click', () => {
     popupWithFormCard.open();
+    cardFormValidator.resetErrors();
 });
 popupOnProfile.addEventListener('click', (evt) => {
-    userInfo.getUserInfo(nameInput, jobInput);
+    const userInfoArray = userInfo.getUserInfo();
+    nameInput.value = userInfoArray.name;
+    jobInput.value = userInfoArray.about;
     popupWithFormProfile.open();
+    profileFormValidator.resetErrors()
 });

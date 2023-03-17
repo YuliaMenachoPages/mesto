@@ -4,9 +4,12 @@ export default class UserInfo {
         this._about = document.querySelector(selectorAbout);
     }
 
-    getUserInfo(fullname, about) {
-        fullname.value = this._name.textContent;
-        about.value = this._about.textContent
+    getUserInfo() {
+        const userInfoArray = {
+            name: this._name.textContent,
+            about: this._about.textContent,
+        }
+        return userInfoArray
     }
 
     setUserInfo(item) {

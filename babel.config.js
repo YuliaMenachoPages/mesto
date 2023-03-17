@@ -14,4 +14,4 @@ const presets = [
     }]
 ];
 
-module.exports = { presets };
+module.exports = {presets};

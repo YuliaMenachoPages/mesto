@@ -1,11 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // подключите плагин
-const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // подключили плагин
+const {CleanWebpackPlugin} = require('clean-webpack-plugin'); // подключили плагин
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
-    entry: { main: './src/scripts/pages/index.js' },
+    entry: {main: './src/scripts/pages/index.js'},
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main.js',
@@ -41,7 +41,7 @@ module.exports = {
                 // MiniCssExtractPlugin.loader и css-loader
                 use: [MiniCssExtractPlugin.loader, {
                     loader: 'css-loader',
-                    options: { importLoaders: 1 }
+                    options: {importLoaders: 1}
                 },
                     'postcss-loader']
             }
