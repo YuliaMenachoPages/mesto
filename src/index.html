@@ -8,11 +8,11 @@
 </head>
 <body class="page">
 <header class="header">
-    <img src="images/header-logo.svg" alt="Место. Россия" class="header__logo">
+    <img src="<%=require('./images/header-logo.svg')%>" alt="Место. Россия" class="header__logo">
 </header>
 <main>
     <section class="profile">
-        <img src="images/profile-picture.jpg" alt="Фото" class="profile__picture">
+        <img src="<%=require('./images/profile-picture.jpg')%>" alt="Фото" class="profile__picture">
         <div class="profile__info">
             <div class="profile__edit-info">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -96,8 +96,5 @@
         </div>
     </li>
 </template>
-<!-- <script type="module"  src="scripts/Card.js" defer></script> -->
-<script type="module" src="scripts/FormValidator.js" defer></script>
-<script type="module" src="scripts/pages/index.js" defer></script>
 </body>
 </html>
