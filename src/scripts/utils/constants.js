@@ -5,7 +5,9 @@ export {
     jobInput,
     popupCardFieldset,
     popupOnCard,
-    validationFields
+    popupAvatarFieldset,
+    popupOnAvatar,
+    validationFields,
 }
 
 const popupProfile = document.querySelector('.popup_type_profile');
@@ -18,7 +20,13 @@ const jobInput = popupProfile.querySelector('.popup__input_type_about');
 // Переменные для создания карточек
 
 const popupCardFieldset = document.querySelector('.popup__fieldset_type_card');
-const popupOnCard = document.querySelector('.profile__add-button');
+const popupOnCard = document.querySelector('.profile__add-button');// Переменные для создания карточек
+
+// Переменные для изменения аватара
+
+const popupAvatarFieldset = document.querySelector('.popup__fieldset_type_profile-picture');
+const popupOnAvatar = document.querySelector('.profile__avatar-button');
+
 
 //Переменные для валидации
 const validationFields = {

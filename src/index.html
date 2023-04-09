@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pages/index.css">
     <title>Место</title>
 </head>
 <body class="page">
@@ -12,13 +11,15 @@
 </header>
 <main>
     <section class="profile">
-        <img src="<%=require('./images/profile-picture.jpg')%>" alt="Фото" class="profile__picture">
+        <button type="button" aria-label="Сменить аватар" class="profile__avatar-button">
+            <img src="#" alt="Фото" class="profile__picture">
+        </button>
         <div class="profile__info">
             <div class="profile__edit-info">
-                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <h1 class="profile__name">Загрузка данных...</h1>
                 <button type="button" aria-label="Редактировать" class="profile__edit-button"></button>
             </div>
-            <h2 class="profile__about">Исследователь океана</h2>
+            <h2 class="profile__about">Загрузка данных...</h2>
         </div>
         <button type="button" aria-label="Добавить" class="profile__add-button"></button>
     </section>
@@ -48,6 +49,23 @@
                        minlength="2"
                        maxlength="200">
                 <span class="popup__error profile-about-error"></span>
+                <button class="popup__button" type="submit" value="Submit">Сохранить</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<div class="popup popup_type_profile-picture">
+    <div class="popup__container">
+        <button aria-label="Закрыть" class="popup__close popup__close_type_profile-picture"></button>
+        <h2 class="popup__header">Обновить аватар</h2>
+        <form action="#" name="popup-form" class="popup__form popup__form_type_profile-picture" novalidate>
+            <fieldset class="popup__fieldset popup__fieldset_type_profile-picture">
+                <input id="profile-picture" class="popup__input popup__input_type_profile-picture" type="url"
+                       name="link"
+                       placeholder="Ссылка на фото"
+                       value=""
+                       required>
+                <span class="popup__error profile-picture-error"></span>
                 <button class="popup__button" type="submit" value="Submit">Сохранить</button>
             </fieldset>
         </form>
@@ -83,6 +101,15 @@
         <h2 class="popup__text"></h2>
     </div>
 </div>
+<div class="popup popup_type_confirmation">
+    <div class="popup__container">
+        <button aria-label="Закрыть" class="popup__close popup__close_type_card"></button>
+        <h2 class="popup__header">Вы уверены?</h2>
+        <form action="#" name="popup-form" class="popup__form popup__form_type_confirmation" novalidate>
+            <button class="popup__button" type="submit" value="Submit">Да</button>
+        </form>
+    </div>
+</div>
 <template class="cards-template">
     <li class="element">
         <button type="button" aria-label="Удалить" class="element__delete element__delete_type_white"></button>
@@ -92,7 +119,10 @@
         </div>
         <div class="element__info">
             <h2 class="element__text"></h2>
-            <button type="button" aria-label="Лайк" class="element__icon"></button>
+            <div class="element__like">
+                <button type="button" aria-label="Лайк" class="element__icon"></button>
+                <p class="element__counter"></p>
+            </div>
         </div>
     </li>
 </template>

@@ -5,9 +5,10 @@ export default class PopupWithForm extends Popup {
         super(popupSelector);
         this._submitter = submitter;
         this._popupForm = this._popup.querySelector('.popup__form');
+        this._submitButton = this._popup.querySelector('.popup__button');
     }
 
-      close(evt) {
+    close(evt) {
         super.close();
         this._popupForm.reset();
     }
@@ -23,7 +24,22 @@ export default class PopupWithForm extends Popup {
             (evt) => {
                 evt.preventDefault();
                 this._submitter(this._getInputValues());
-                this.close();
             });
+    }
+
+    toggleButtonContent() {
+        const buttonContent = this._submitButton.innerText;
+        if (buttonContent === 'Сохранить') {
+            this._submitButton.innerText = 'Сохранение...';
+        }
+        if (buttonContent === 'Сохранение...') {
+            this._submitButton.innerText = 'Сохранить';
+        }
+        if (buttonContent === 'Создать') {
+            this._submitButton.innerText = 'Создание...';
+        }
+        if (buttonContent === 'Создание...') {
+            this._submitButton.innerText = 'Создать';
+        }
     }
 }

@@ -8,7 +8,7 @@
     background-color: #FFFFFF;
     min-width: 23px;
     min-height: 20px;
-    margin: 0 0 0 20px;
+    margin: 0;
     padding: 0;
     transition: opacity 0.5s;
     cursor: pointer;
