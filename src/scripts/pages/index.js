@@ -42,13 +42,14 @@ const popupWithFormProfile = new PopupWithForm('.popup_type_profile',
             popupWithFormProfile.toggleButtonContent();
             api.changeUserData(item)
                 .then((res) => {
-                    userInfo.queryUserInfo(res);
-                    userInfo.setUserName();
-                    userInfo.setUserActivity();
+                    userInfo.setUserInfo(res);
+                    popupWithFormProfile.close();
+                })
+                .catch((err) => {
+                    console.log(err);
                 })
                 .finally(() => {
                     popupWithFormProfile.toggleButtonContent();
-                    popupWithFormProfile.close();
                 });
         }
     });
@@ -59,26 +60,35 @@ const popupWithFormAvatar = new PopupWithForm('.popup_type_profile-picture',
             popupWithFormAvatar.toggleButtonContent();
             api.changeUserAvatar(item)
                 .then((res) => {
-                    userInfo.queryUserInfo(res);
-                    userInfo.setUserAvatar();
+                    userInfo.setUserInfo(res);
                     popupWithFormAvatar.close();
+                    popupWithFormAvatar.close();
+                })
+                .catch((err) => {
+                    console.log(err);
                 })
                 .finally(() => {
                     popupWithFormAvatar.toggleButtonContent();
-                    popupWithFormAvatar.close();
                 });
         }
     })
 
 const handleLikeClick = (card) => {
     if (card.checkIfLiked()) {
-        api.deleteLike(card._id).then((likes) => {
+        api.deleteLike(card._id)
+            .then((likes) => {
             card.setLikes(likes);
+        })
+    .catch((err) => {
+            console.log(err);
         });
-
     } else {
-        api.addLike(card._id).then((likes) => {
+        api.addLike(card._id)
+            .then((likes) => {
             card.setLikes(likes)
+        })
+    .catch((err) => {
+            console.log(err);
         });
     }
 }
@@ -111,15 +121,19 @@ const popupWithFormCard = new PopupWithForm('.popup_type_card', {
         api.addCard({name: item.landmark, link: item.link})
             .then((cardData) => {
                 const cardElement = createCard(cardData);
-                section.addItemReverse(cardElement)
+                section.addItemReverse(cardElement);
+                popupWithFormCard.close();
+            })
+            .catch((err) => {
+                console.log(err);
             })
             .finally(() => {
                 popupWithFormCard.toggleButtonContent();
-                popupWithFormCard.close();
             });
     }
 });
 
+const popupWithImage = new PopupWithImage('.popup_type_image-container');
 const profileFormValidator = new FormValidator(validationFields, popupProfileFieldset);
 const cardFormValidator = new FormValidator(validationFields, popupCardFieldset);
 const avatarFormValidator = new FormValidator(validationFields, popupAvatarFieldset);
@@ -131,29 +145,31 @@ Promise.all([
     api.getInitialCards(),
 ])
     .then(results => {
-        userInfo.queryUserInfo(results[0]);
-        userInfo.setUserName();
-        userInfo.setUserActivity();
-        userInfo.setUserAvatar();
-
+        userInfo.setUserInfo(results[0]);
         section.renderItems(results[1]);
     })
-    .catch(err => console.error(err));
+     .catch((err) =>
+    {console.error(err)
+    });
 
 profileFormValidator.enableValidation();
 cardFormValidator.enableValidation();
 avatarFormValidator.enableValidation();
 
+popupWithFormAvatar.setEventListeners();
+popupWithFormProfile.setEventListeners();
+popupWithFormCard.setEventListeners();
+popupWithConfirmation.setEventListeners();
+popupWithImage.setEventListeners();
+
 function createCard(cardData) {
-    const popupWithImage = new PopupWithImage('.popup_type_image-container');
     const card = new Card(
         cardData, {
             handleCardClick: () => {
                 popupWithImage.open(cardData.link, cardData.name)
             }
         },
-        handleLikeClick, handleDeleteIconClick, '.cards-template', userInfo.id);
-
+        handleLikeClick, handleDeleteIconClick, '.cards-template', userInfo.queryUserInfo());
     const cardElement = card.generateCard();
     return cardElement;
 }
@@ -167,6 +183,7 @@ popupOnCard.addEventListener('click', () => {
 
 popupOnProfile.addEventListener('click', () => {
     const userInfoArray = userInfo.getUserInfo();
+    console.log(userInfoArray);
     nameInput.value = userInfoArray.name;
     jobInput.value = userInfoArray.about;
     popupWithFormProfile.open();
@@ -178,61 +195,3 @@ popupOnAvatar.addEventListener('click', () => {
     avatarFormValidator.resetErrors();
 })
 
-
-//______________TEST______________
-
-
-//     Перед зпросом не забудьте запустить прелодер,
-//     то есть как-то отобразить в интерфейсе что запрос ушел и в данный момент ожидается его ответ (в ТЗ тоже об этом сказано).
-// После ответа сервера (если он ок), вам надо заменить картинку на фронте и отключить прелодер, а затем закрыть попап
-
-// const form = document.forms.search;
-// const content = document.querySelector('.content');
-// const result = document.querySelector('.content__result');
-// const error = document.querySelector('.content__error');
-// const spinner = document.querySelector('.spinner');
-//
-// function search(entity, entityId) {
-//     return fetch(`https://swapi.nomoreparties.co/${entity}/${entityId}/`)
-// }
-//
-// form.addEventListener('submit', function submit(e) {
-//     e.preventDefault();
-//     renderLoading(true);
-//     search(form.elements.entity.value, form.elements.entityId.value)
-//         .then((res) => {
-//             if (res.ok) {
-//                 return res.json();
-//             }
-//             return Promise.reject(res.status);
-//         })
-//         .then((res) => {
-//             console.log(res);
-//             renderResult(res.name);
-//         })
-//         .catch((err) => {
-//             console.log(`Ошибка: ${err}`);
-//             renderError(`Ошибка: ${err}`);
-//         })
-//         .finally(() => renderLoading(false));
-// });
-//
-// function renderResult(text) {
-//     result.textContent = text;
-//     error.textContent = '';
-// }
-//
-// function renderError(err) {
-//     result.textContent = '';
-//     error.textContent = err;
-// }
-//
-// function renderLoading(isLoading) {
-//     if (isLoading) {
-//         spinner.classList.add('spinner_visible');
-//         content.classList.add('content_hidden');
-//     } else {
-//         spinner.classList.remove('spinner_visible');
-//         content.classList.remove('content_hidden');
-//     }
-// }

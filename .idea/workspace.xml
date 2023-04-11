@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e98a92c-4c61-4e82-95e9-2a2198e4d24c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/blocks/element/__counter/element__counter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/element/__like/element__like.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar-button/profile__avatar-button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/Api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/PopupWithConfirmation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cors-anywhere" beforeDir="false" afterPath="$PROJECT_DIR$/cors-anywhere" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cors-anywhere/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/cors-anywhere/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cors-anywhere/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/cors-anywhere/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cors-anywhere/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/cors-anywhere/demo.html" afterDir="false" />
@@ -26,28 +21,10 @@
       <change beforePath="$PROJECT_DIR$/cors-anywhere/test/test-memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/cors-anywhere/test/test-memory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cors-anywhere/test/test-ratelimit.js" beforeDir="false" afterPath="$PROJECT_DIR$/cors-anywhere/test/test-ratelimit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cors-anywhere/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/cors-anywhere/test/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/element/__icon/element__icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__icon/element__icon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/popup/__fieldset/popup__fieldset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__fieldset/popup__fieldset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/popup/__form/popup__form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__form/popup__form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/popup/__header/popup__header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/__header/popup__header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/popup/popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__add-button/profile__add-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__add-button/profile__add-button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__edit-button/profile__edit-button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__edit-button/profile__edit-button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__name/profile__name.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__name/profile__name.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__picture/profile__picture.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__picture/profile__picture.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/profile/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/Api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/Popup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/PopupWithForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/Section.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/UserInfo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/utils/constCards.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/constants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,6 +147,10 @@
       <workItem from="1681063265686" duration="953000" />
       <workItem from="1681064682528" duration="3011000" />
       <workItem from="1681073369957" duration="110000" />
+      <workItem from="1681113705218" duration="777000" />
+      <workItem from="1681194173365" duration="2983000" />
+      <workItem from="1681204641645" duration="5994000" />
+      <workItem from="1681217644307" duration="1242000" />
     </task>
     <servers />
   </component>
