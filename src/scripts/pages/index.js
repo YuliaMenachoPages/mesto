@@ -43,10 +43,12 @@ const popupWithFormProfile = new PopupWithForm('.popup_type_profile',
             api.changeUserData(item)
                 .then((res) => {
                     userInfo.setUserInfo(res);
-                    popupWithFormProfile.close();
                 })
                 .catch((err) => {
                     console.log(err);
+                })
+                .then(() => {
+                    popupWithFormProfile.close()
                 })
                 .finally(() => {
                     popupWithFormProfile.toggleButtonContent();
@@ -61,11 +63,12 @@ const popupWithFormAvatar = new PopupWithForm('.popup_type_profile-picture',
             api.changeUserAvatar(item)
                 .then((res) => {
                     userInfo.setUserInfo(res);
-                    popupWithFormAvatar.close();
-                    popupWithFormAvatar.close();
                 })
                 .catch((err) => {
                     console.log(err);
+                })
+                .then(() => {
+                    popupWithFormAvatar.close()
                 })
                 .finally(() => {
                     popupWithFormAvatar.toggleButtonContent();
@@ -77,28 +80,28 @@ const handleLikeClick = (card) => {
     if (card.checkIfLiked()) {
         api.deleteLike(card._id)
             .then((likes) => {
-            card.setLikes(likes);
-        })
-    .catch((err) => {
-            console.log(err);
-        });
+                card.setLikes(likes);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     } else {
         api.addLike(card._id)
             .then((likes) => {
-            card.setLikes(likes)
-        })
-    .catch((err) => {
-            console.log(err);
-        });
+                card.setLikes(likes)
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     }
 }
 
 const handleFormSubmit = (card) => {
     api.deleteCard(card._id)
         .then(() => {
-        card.deleteCard();
-        popupWithConfirmation.close();
-    })
+            card.deleteCard();
+            popupWithConfirmation.close();
+        })
 }
 
 const popupWithConfirmation = new PopupWithConfirmation('.popup_type_confirmation',
@@ -122,10 +125,12 @@ const popupWithFormCard = new PopupWithForm('.popup_type_card', {
             .then((cardData) => {
                 const cardElement = createCard(cardData);
                 section.addItemReverse(cardElement);
-                popupWithFormCard.close();
             })
             .catch((err) => {
                 console.log(err);
+            })
+            .then(() => {
+                popupWithFormCard.close()
             })
             .finally(() => {
                 popupWithFormCard.toggleButtonContent();
@@ -148,8 +153,8 @@ Promise.all([
         userInfo.setUserInfo(results[0]);
         section.renderItems(results[1]);
     })
-     .catch((err) =>
-    {console.error(err)
+    .catch((err) => {
+        console.error(err)
     });
 
 profileFormValidator.enableValidation();
