@@ -43,12 +43,10 @@ const popupWithFormProfile = new PopupWithForm('.popup_type_profile',
             api.changeUserData(item)
                 .then((res) => {
                     userInfo.setUserInfo(res);
+                    popupWithFormProfile.close();
                 })
                 .catch((err) => {
                     console.log(err);
-                })
-                .then(() => {
-                    popupWithFormProfile.close()
                 })
                 .finally(() => {
                     popupWithFormProfile.toggleButtonContent();
@@ -63,12 +61,10 @@ const popupWithFormAvatar = new PopupWithForm('.popup_type_profile-picture',
             api.changeUserAvatar(item)
                 .then((res) => {
                     userInfo.setUserInfo(res);
+                    popupWithFormAvatar.close();
                 })
                 .catch((err) => {
                     console.log(err);
-                })
-                .then(() => {
-                    popupWithFormAvatar.close()
                 })
                 .finally(() => {
                     popupWithFormAvatar.toggleButtonContent();
@@ -79,6 +75,9 @@ const popupWithFormAvatar = new PopupWithForm('.popup_type_profile-picture',
 const handleLikeClick = (card) => {
     if (card.checkIfLiked()) {
         api.deleteLike(card._id)
+            .then((res) => {
+                return res["likes"]
+            })
             .then((likes) => {
                 card.setLikes(likes);
             })
@@ -87,6 +86,9 @@ const handleLikeClick = (card) => {
             });
     } else {
         api.addLike(card._id)
+            .then((res) => {
+                return res["likes"]
+            })
             .then((likes) => {
                 card.setLikes(likes)
             })
@@ -125,12 +127,10 @@ const popupWithFormCard = new PopupWithForm('.popup_type_card', {
             .then((cardData) => {
                 const cardElement = createCard(cardData);
                 section.addItemReverse(cardElement);
+                popupWithFormCard.close();
             })
             .catch((err) => {
                 console.log(err);
-            })
-            .then(() => {
-                popupWithFormCard.close()
             })
             .finally(() => {
                 popupWithFormCard.toggleButtonContent();

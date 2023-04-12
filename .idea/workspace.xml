@@ -21,6 +21,8 @@
       <change beforePath="$PROJECT_DIR$/cors-anywhere/test/test-memory.js" beforeDir="false" afterPath="$PROJECT_DIR$/cors-anywhere/test/test-memory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cors-anywhere/test/test-ratelimit.js" beforeDir="false" afterPath="$PROJECT_DIR$/cors-anywhere/test/test-ratelimit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cors-anywhere/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/cors-anywhere/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/Api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/UserInfo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,6 +152,7 @@
       <workItem from="1681217644307" duration="1242000" />
       <workItem from="1681232730213" duration="611000" />
       <workItem from="1681241235241" duration="1382000" />
+      <workItem from="1681243493317" duration="1697000" />
     </task>
     <servers />
   </component>

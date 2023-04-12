@@ -2,7 +2,7 @@ export default class Api {
     constructor({initialUrl, headers}) {
         this.initialUrl = initialUrl;
         this.headers = headers;
-            }
+    }
 
     _getResponseData(res) {
         if (!res.ok) {
@@ -17,10 +17,7 @@ export default class Api {
             method: 'GET',
             headers: this.headers
         })
-            .then(res => this._getResponseData(res))
-            .catch((err) => {
-                console.log(err); // выведем ошибку в консоль
-            });
+            .then(res => this._getResponseData(res));
     }
 
 //добавить карточку (POST)
@@ -33,10 +30,7 @@ export default class Api {
                 link: cardData.link,
             }),
         })
-            .then(res => this._getResponseData(res))
-            .catch((err) => {
-                console.log(err); // выведем ошибку в консоль
-            });
+            .then(res => this._getResponseData(res));
     }
 
     // добавить лайк карточки (PUT)
@@ -45,13 +39,7 @@ export default class Api {
             method: 'PUT',
             headers: this.headers,
         })
-            .then(res => this._getResponseData(res))
-            .then((res) => {
-                return res["likes"]
-            })
-            .catch((err) => {
-                console.log(err); // выведем ошибку в консоль
-            });
+            .then(res => this._getResponseData(res));
     }
 
 // удалить лайк карточки (DELETE)
@@ -60,13 +48,7 @@ export default class Api {
             method: 'DELETE',
             headers: this.headers,
         })
-            .then(res => this._getResponseData(res))
-            .then((res) => {
-                return res["likes"]
-            })
-            .catch((err) => {
-                console.log(err); // выведем ошибку в консоль
-            });
+            .then(res => this._getResponseData(res));
     }
 
 //удалить карточку (DELETE)
@@ -88,9 +70,6 @@ export default class Api {
             headers: this.headers,
         })
             .then(res => this._getResponseData(res))
-            .catch((err) => {
-                console.log(err); // выведем ошибку в консоль
-            });
     }
 
 // заменить данные пользователя (PATCH)
@@ -104,9 +83,6 @@ export default class Api {
             }),
         })
             .then(res => this._getResponseData(res))
-            .catch((err) => {
-                console.log(err); // выведем ошибку в консоль
-            });
     }
 
 // заменить аватар (PATCH)
